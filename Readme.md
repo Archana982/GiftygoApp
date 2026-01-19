@@ -1,39 +1,39 @@
-# Shoe E-Commerce App
 
-Simple Shoe ordering App created with FireBase as backend
+INTERACTIVE QR-DRIVEN 3D ONLINE SHOPPING APP
 
-## Description
+Android-based online shopping application developed using Kotlin with Firebase as the backend.
+This app enhances the shopping experience by integrating QR code scanning and interactive 3D product visualization, allowing users to explore products in real time before selection.
 
-This app has currently Five main Features
+Description
 
-* FireBase Email Authentication
-* Displaying Products into main page fron FireBase Realtime DataBase
-* Like Functionality
-* Product Detail Page - where you choose size of the shoes and Add Product to the created
-* Displaying Cart Item Products From FireStore
+This application currently includes the following main features:
 
-## Tech Stack Used
+Firebase Email Authentication
 
-* Firebase Email Authentication
-* Firebase Realtime DataBase
-* Firebase Firestore
+QR Code Scanning to access 3D product models
+
+Displaying products on the main page from Firebase Realtime Database
+
+Interactive 3D Product Preview with detailed view
+
+Product Detail Page – view size, color, and price information
+
+Like / Favorite functionality
+
+Displaying cart items from Firebase Firestore
+
+Tech Stack Used
+
+Android Studio (Kotlin)
+
+Firebase Email Authentication
+
+Firebase Realtime Database
+
+Firebase Firestore
+
+GitHub Repository (Source Code Management & 3D models storing)
 
 <br />
 
-***Try latest ShoeApp app apk from below 👇***
-
-[<img src="https://seeklogo.com/images/D/download-android-apk-badge-logo-D074C6882B-seeklogo.com.png">](https://firebasestorage.googleapis.com/v0/b/autocommunity-937ec.appspot.com/o/shoeapp.apk?alt=media&token=268bc5bf-f60a-4885-a2b9-4a314f5b0980)
-
-<br />
-
-## Screenshots
-
-<a href="https://postimg.cc/N9NXKkbC" target="_blank"><img src="https://i.postimg.cc/VvwWH7tw/ss-cart-Page.png" alt="ss-cart-Page"/></a><br/><br/>
-<a href="https://postimg.cc/6Tnw5p3n" target="_blank"><img src="https://i.postimg.cc/VsHNgSPG/ss-details-Page.png" alt="ss-details-Page"/></a><br/><br/>
-<a href="https://postimg.cc/XBf02QhQ" target="_blank"><img src="https://i.postimg.cc/KjVv8W5S/ss-homepage.png" alt="ss-homepage"/></a><br/><br/>
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_GitHUb-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/dszvivian/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vivian-d-souza-0311571ba/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/dszvivian)
-
+Try the latest GiftyGo app APK from below 👇
