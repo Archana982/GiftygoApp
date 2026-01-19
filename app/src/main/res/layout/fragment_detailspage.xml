@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayishWhite"
+    tools:context=".ui.fragments.DetailsFragment">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/detailActualToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/simon"
+        app:titleTextColor="@android:color/white"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Fixed WebView -->
+    <WebView
+        android:id="@+id/ivDetails"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_margin="12dp"
+        android:background="@color/lightgrey"
+        app:layout_constraintTop_toBottomOf="@id/detailActualToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable Content Below WebView -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/ivDetails"
+        app:layout_constraintBottom_toTopOf="@id/llBottomDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/tvDetailsProductName"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adidas Predator Gladiator"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvDetailsProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:maxLines="4"
+                android:text="@string/JordanDesciption"
+                android:textColor="@color/greyishtext" />
+
+            <!-- Color Selection -->
+            <TextView
+                android:id="@+id/tvSelectedColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Color: None"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingTop="12dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/colorChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true">
+
+                <!-- Red Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipRed"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Red"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/red" />
+
+                <!-- White Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipWhite"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="White"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/white" />
+
+                <!-- Black Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBlack"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Black"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/black" />
+
+                <!-- Orange Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOrange"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Orange"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/orange" />
+
+                <!-- Yellow Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipYellow"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yellow"
+                    android:textColor="@color/black"
+                    app:chipBackgroundColor="@color/yellow" />
+
+                <!-- Grey Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipGrey"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grey"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/grey" />
+
+                <!-- Brown Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBrown"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brown"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/brown" />
+
+                <!-- Green Color Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipGreen"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Green"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/green" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Price -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/greyishtext"
+                android:textSize="16sp"
+                android:paddingTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvDetailsProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹10,000"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingBottom="12dp" />
+
+            <!-- Quantity -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Quantity"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/quantitySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/quantity_array"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Buttons -->
+    <LinearLayout
+        android:id="@+id/llBottomDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/custom_bnv"
+        android:padding="20dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Order Now"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDetailsAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My orders"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_button" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

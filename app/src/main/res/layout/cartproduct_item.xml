@@ -1,0 +1,72 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/grayishWhite"
+    android:elevation="2dp"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/tvOrderProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvOrderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹0"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvOrderColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color: Blue"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvOrderQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity: 1"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Order Placed"
+        android:textColor="@color/red" />
+
+    <!-- Buttons Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Received"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/green" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

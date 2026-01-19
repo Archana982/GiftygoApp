@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginpage">
+
+    <EditText
+        android:id="@+id/etNameSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/grayishWhite"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:autofillHints="name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="21sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <EditText
+        android:id="@+id/etEmailSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/grayishWhite"
+        android:ems="10"
+        android:hint="Enter Email"
+        android:autofillHints="emailAddress"
+
+        android:inputType="textEmailAddress"
+
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="21sp"
+        android:textStyle="bold|normal"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/etNameSignUp"
+        app:layout_constraintStart_toStartOf="@+id/etNameSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/etNameSignUp" />
+
+    <EditText
+        android:id="@+id/etPasswordSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/grayishWhite"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:autofillHints="password"
+
+
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="21sp"
+        android:textStyle="bold|normal"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etEmailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/etEmailSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSignUp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/custom_button"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/tvNavigateToSignIn" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/tvNavigateToSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:foregroundTint="#9E1616"
+        android:text="Already have Account ? SignIn"
+        android:textColor="#100A0A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/etPasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/etPasswordSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordSignUp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="379dp"
+        android:layout_height="70dp"
+
+        android:fontFamily="@font/droid_serif_bold_italic"
+        android:lineSpacingExtra="10sp"
+        android:text=" Hi! Welcome"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F0F0F0"
+        android:textSize="39sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="235dp"
+        android:layout_height="49dp"
+        android:fontFamily="@font/droid_serif_bold_italic"
+        android:lineSpacingExtra="10sp"
+        android:textColor="#D9D1D1"
+        android:text="Let's create an account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <Button
+        android:id="@+id/login_as_admin"
+        android:layout_width="140dp"
+        android:layout_height="75dp"
+        android:background="@drawable/round_button"
+        android:text="Admin Login"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.292"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571908885504",
+    "project_id": "d-kisok",
+    "storage_bucket": "d-kisok.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571908885504:android:90fa544b11358f06f79ce5",
+        "android_client_info": {
+          "package_name": "com.example.giftygo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDBMB7Qs3dn4HjPm1nm3yp6Jle0a_ZqNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

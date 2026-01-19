@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <style>
+        body { margin: 0; }
+        model-viewer { width: 100vw; height: 100vh; }
+    </style>
+    <title>3D Viewer</title>
+</head>
+<body style="background-color:black">
+
+<model-viewer
+        id="viewer"
+        src=""
+        camera-controls
+        auto-rotate
+        auto-rotate-delay="0"
+        environment-image="neutral"
+        exposure="1.0"
+        shadow-intensity="1"
+        shadow-softness="0"
+        style="width: 100vw; height: 100vh;">
+
+</model-viewer>
+
+<script>
+    const viewer = document.getElementById('viewer');
+    const urlParams = new URLSearchParams(window.location.search);
+    const modelUrl = urlParams.get('model');
+
+    if (modelUrl) {
+        viewer.src = decodeURIComponent(modelUrl);
+    } else {
+        document.body.innerHTML = "<h2 style='text-align:center; color:white;'>No model URL provided.</h2>";
+    }
+
+    function animateRotation() {
+        const THREE = window.THREE;
+        if (viewer && viewer.model && THREE) {
+            const model = viewer.model;
+            model.scene.rotation.x += 0.01;
+            model.scene.rotation.y += 0.01;
+            model.scene.rotation.z += 0.01;
+        }
+        requestAnimationFrame(animateRotation);
+    }
+
+    viewer.addEventListener('load', () => {
+        // Set material style
+        const materials = viewer.model?.materials;
+        if (materials) {
+            materials.forEach(material => {
+                material.pbrMetallicRoughness.setBaseColorFactor([0.9, 0.9, 0.9, 1.0]);
+                material.pbrMetallicRoughness.setMetallicFactor(0.0);
+                material.pbrMetallicRoughness.setRoughnessFactor(0.4);
+            });
+        }
+
+        // Start 360° physical rotation
+        animateRotation();
+    });
+
+    // Dynamic color change function
+    function setColor(colorArray) {
+        const materials = viewer.model?.materials;
+        if (materials) {
+            materials.forEach(material => {
+                material.pbrMetallicRoughness.setBaseColorFactor(colorArray);
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

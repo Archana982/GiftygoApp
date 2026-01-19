@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayishWhite"
+    tools:context=".ui.fragments.LikeFragment">
+
+    <!-- Toolbar (No title inside) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/likeToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/simon"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Screen Heading -->
+    <TextView
+        android:id="@+id/likedProductsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liked Products"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/likeToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView for Liked Products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLikedProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/likedProductsHeading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/like_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

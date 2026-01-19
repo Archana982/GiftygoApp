@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Admin Login "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="24dp"/>
+
+        <!-- Admin Name Input -->
+        <EditText
+            android:id="@+id/etAdminName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Admin Name"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey_500"/>
+
+        <!-- Mobile Number Input -->
+        <EditText
+            android:id="@+id/etAdminMobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Mobile Number (e.g. 8590744875)"
+            android:inputType="phone"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="24dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey_500"/>
+
+        <!-- Proceed Button -->
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Proceed"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/purple_700"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>
